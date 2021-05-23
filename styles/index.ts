@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components'
 
 export const Container = styled.div`
+  overflow: hidden;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -16,6 +17,8 @@ export const Container = styled.div`
 `
 
 export const Header = styled.h1<{h1?: boolean; h2?: boolean}>`
+  margin-right: 1rem;
+  margin-left: 1rem;
   font-family: Gilroy, sans-serif;
   ${props => props.h1 && css`
     color: white;
@@ -27,8 +30,19 @@ export const Header = styled.h1<{h1?: boolean; h2?: boolean}>`
   color: #C8C8C8;
   font-size: 1.4rem;
   `}
-  font
+  @media (max-width: 580px) {
+    ${props => props.h1 && css`
+    font-size: 2.25rem;
+    `}
+
+    ${props => props.h2 && css`
+    font-size: 1.2rem;
+  `}
+  }
 `
-
-
-
+export const Img = styled.img`
+  margin-bottom: -1rem;
+  @media (max-width: 580px) {
+    width: 12rem;
+  }
+`

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Container, Header} from "@/styles/index"
+import { Container, Header, Img} from "@/styles/index"
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         />
       </Head>
     <Container>
-      <img src="logo.png" alt="Nixode Logo"/>
+      <Img src="logo.png" alt="Nixode Logo"/>
       <Header h1>Nixode is an upcoming cryptocurrency startup</Header>
       <Header h2>Our website is currently in development and will be shipping out soon.</Header>
     </Container>
